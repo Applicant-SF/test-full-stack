@@ -48,3 +48,15 @@ The default dev-server port is `4040`.
 TODO:
 -- Document webpack development server arguments.
 ```
+
+## Tests
+
+Unit tests use jest.
+
+Before running your test you must set the environment variables needed by the build pipeline. `npm run test:dev` will build the code prior to running the tests. See build.
+
+E.g. Using cross-env
+
+```
+node_modules/.bin/cross-env BACKEND_HOST_URI='https://0dgcwbc735.execute-api.us-east-1.amazonaws.com/dev/' npm run test
+```
